@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=>, initial-scale=1.0" />
+    <title>JS Events Lesson</title>
+
+    <style>
+      h1 {
+        text-align: center;
+        margin-top: 150px;
+      }
+      h2 {
+        text-align: center;
+        color: blueviolet;
+        font-size: 27px;
+        margin: -15px auto;
+      }
+      h5 {
+        text-align: center;
+        font-weight: 300;
+        font-size: 20px;
+        margin: 70px 0px 0px 0px;
+      }
+      p {
+        text-align: center;
+        font-weight: bolder;
+      }
+      button {
+        display: block;
+        margin: 50px auto;
+        padding: 15px;
+        color: #885df1;
+        background: none;
+        border: 1px solid #885df1;
+        border-radius: 40px;
+        box-shadow: 5px 5px 9px #c9c6d0;
+        transition: all 250ms ease-in-out;
+      }
+      button:hover {
+        color: azure;
+        background: #885df1;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>👩🏾‍💻SheCodes is a coding Workshop for Women</h1>
+    <h2>Access a new career in Technology</h2>
+
+    <h5>SheCodes teaches coding, design and management skills to women</h5>
+    <p>Limited amount of spots!</p>
+
+    <button>Apply Now</button>
+
+    <script>
+      function applyToProgram() {
+        let name = prompt("what is your name?");
+        let age = prompt("How old are you?");
+
+        if (age >= 18) {
+          let h1 = document.querySelector("h1");
+          h1.innerHTML = "Hi, " + name + "! Welcome to SheCodes !";
+        } else {
+          let h1 = document.querySelector("h1");
+          h1.innerHTML = "Sorry, " + name + "! You cannot join SheCodes";
+        }
+      }
+
+      let applicationbtn = document.querySelector("button");
+
+      applicationbtn.addEventListener("click", applyToProgram);
+    </script>
+  </body>
+</html>
