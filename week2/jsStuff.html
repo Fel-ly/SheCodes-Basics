@@ -4,18 +4,72 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Javascript basics</title>
+
+    <style>
+      h1 {
+        text-align: center;
+        color: chocolate;
+      }
+    </style>
   </head>
   <body>
-
     <h1>Hellooooo!😃</h1>
 
     <script>
-      let homeTown = prompt("What is your hometown?");
-      alert("You are from " + homeTown + " town");
-      
-      let firstName = prompt("What is your first name?");
-      let lastName = prompt("What is your last name?");
-      alert("Hello " + firstName + " " + lastName + " 👋🏾");
+      // JS in html
+
+      // let homeTown = prompt("What is your hometown?");
+      // alert("You are from " + homeTown + " town");
+      // let firstName = prompt("What is your first name?");
+      // let lastName = prompt("What is your last name?");
+      // alert("Hello " + firstName + " " + lastName + " 👋🏾");
+
+      // JS if statements
+
+      // let age = prompt("How old are you?");
+      // if (age < 18) {
+      //   alert("You cannot apply :(");
+      // }
+      // if (age >= 18) {
+      //   alert("You  can  apply to SheCodes :)");
+      // }
+
+      // JS if-else statements
+
+      // let currentHour = prompt("What is the current hour of the day?");
+
+      // if (currentHour <= 12) {
+      //   alert("Good Morning");
+      // } else {
+      //   if (currentHour >= 18) {
+      //     alert("Good evening");
+      //   } else {
+      //     alert("Good afternoon");
+      //   }
+      // }
+
+      // Logical operators
+
+      // country = prompt("What country are you from?").toLowerCase();
+
+      // if (country === "portugal" || country === "brazil") {
+      //   alert("You speak Portuguese");
+      // } else {
+      //   alert("You don't speak Portuguese");
+      // }
+
+      // JS Functions
+      function askForCountry() {
+        country = prompt("What country are you from?").toLowerCase().trim();
+
+        if (country === "portugal" || country === "brazil") {
+          alert("You speak Portuguese");
+        } else {
+          alert("Go learn Portuguese!");
+        }
+      }
+
+      askForCountry();
     </script>
   </body>
 </html>
