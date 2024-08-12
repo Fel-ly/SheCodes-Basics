@@ -1,27 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div class="All-about-music">
-        <h1> I Looove Music!!</h1>
-        <h2>The more the genres the better!</h2>
-        <hr>
-        <img src="https://img.freepik.com/free-photo/volumetric-musical-background-with-treble-clef-notes-generative-ai_169016-29575.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1723420800&semt=ais_hybrid">
-        <p>
-            Music is like a universal language that has the ability to kindle a wide range of feelings. It's amazing how the many genres cater to people with varied tastes.
-            It can also serve as a form of expression and communication when words fail. Different people use music for different purposes, some as a stress relief, to influence mood.
-            Additionally, the social aspect of music—whether it’s attending concerts, singing in choirs, or sharing playlists with friends—fosters a sense of community and belonging.
-            Ultimately, music is cherished not only for its aesthetic qualities but also for its ability to touch hearts and minds, making it a beloved art form across cultures and generations.
-            <br /> <br />
-            <a href="https://en.wikipedia.org/wiki/List_of_music_genres_and_styles">View genres on Wikipedia</a>
-            <br /> <br />
-            <button class="button">Identify Music Taste</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music</title>
 
-        </p>
+    <style>
+      body {
+        display: block;
+      }
+      .music {
+        background: linear-gradient(to bottom, rgb(0, 255, 213), blue);
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        border-radius: 8px;
+        margin: 20px 150px;
+        padding: 20px;
+      }
+      h1 {
+        color: rgb(64, 125, 216);
+        text-align: center;
+      }
+      h2 {
+        text-align: center;
+        font-size: large;
+      }
+      img {
+        display: block;
+        margin: auto;
+      }
+      button {
+        display: block;
+        margin: 5px auto;
+        padding: 20px;
+        color: #ffffff;
+        background: black;
+        border-radius: 20px;
+        box-shadow: 5px 5px 6px #a5afda;
+        transition: all 250ms ease-in-out;
+      }
+      button:hover {
+        color: #000000;
+        background: #efefef;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="music">
+      <h1>I Looove Music!!</h1>
+      <h2>The more the genres the better!</h2>
+      <hr />
+      <img
+        src="https://img.freepik.com/free-photo/volumetric-musical-background-with-treble-clef-notes-generative-ai_169016-29575.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1723420800&semt=ais_hybrid"
+        width="350"
+      />
+      <hr />
+      <p>
+        Music is like a <strong>universal language</strong> that has the ability
+        to kindle a wide range of feelings. It's amazing how the many genres
+        cater to people with varied tastes. It can also serve as a form of
+        expression and communication when words fail. Different people use music
+        for different purposes, some as a stress relief, to influence mood.
+        Additionally, the social aspect of music—whether it’s attending
+        concerts, singing in choirs, or sharing playlists with friends—fosters a
+        sense of community and belonging. Ultimately, music is cherished not
+        only for its <em>aesthetic qualities</em> but also for its ability to
+        touch hearts and minds, making it a beloved art form across cultures and
+        generations.
+      </p>
+      <a href="https://en.wikipedia.org/wiki/List_of_music_genres_and_styles"
+        >View genres on Wikipedia</a
+      >
+      <br />
+      <br />
+      <button>Identify Music Taste</button>
+
+      <p>Coded by <em> Felistus Kioko </em></p>
+
+      <script>
+        function determineTaste() {
+          let name = prompt("what is your name?");
+          let choice = prompt("RnB, hiphop or trap?");
+
+          if ((choice = "RnB")) {
+            alert("Yaay " + name + "! You're so cool");
+          } else {
+            alert(
+              "Ah" +
+                name +
+                ", sounds boring to me but as long as you're happy😞"
+            );
+          }
+        }
+
+        let musicbtn = document.querySelector("button");
+
+        musicbtn.addEventListener("click", determineTaste);
+      </script>
     </div>
-</body>
+  </body>
 </html>
