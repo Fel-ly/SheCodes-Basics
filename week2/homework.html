@@ -3,100 +3,112 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Music</title>
+    <title>Weather</title>
 
     <style>
-      body {
+      .heading {
+        text-align: center;
+        color: #1a64d6;
+      }
+      .emoji {
+        font-size: 60px;
         display: block;
       }
-      .music {
-        background: linear-gradient(to bottom, rgb(0, 255, 213), blue);
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        border-radius: 8px;
-        margin: 20px 150px;
-        padding: 20px;
-      }
-      h1 {
-        color: rgb(64, 125, 216);
+      .content {
+        font-size: x-large;
         text-align: center;
+        margin-top: 0px;
       }
       h2 {
+        margin: 0px;
         text-align: center;
-        font-size: large;
       }
-      img {
+      ul {
+        padding: 0px;
+        margin: 0px;
+      }
+      li {
+        list-style-type: none;
+        padding: 10px 0px;
+      }
+      li:hover {
+        background-color: #fffbef;
+      }
+      h4 {
+        margin: 20px auto;
+      }
+      p {
         display: block;
-        margin: auto;
+        margin: 20px auto;
       }
       button {
-        display: block;
-        margin: 5px auto;
         padding: 20px;
-        color: #ffffff;
-        background: black;
-        border-radius: 20px;
-        box-shadow: 5px 5px 6px #a5afda;
+        margin: 20px auto;
+        border-radius: 50px;
+        border-color: #1a64d6;
+        background: #1a64d6;
+        color: white;
+        box-shadow: 5px 5px 8px #e4e3e3;
         transition: all 250ms ease-in-out;
+        font-size: large;
       }
       button:hover {
-        color: #000000;
-        background: #efefef;
+        color: #1a64d6;
+        background: white;
         cursor: pointer;
       }
     </style>
   </head>
   <body>
-    <div class="music">
-      <h1>I Looove Music!!</h1>
-      <h2>The more the genres the better!</h2>
-      <hr />
-      <img
-        src="https://img.freepik.com/free-photo/volumetric-musical-background-with-treble-clef-notes-generative-ai_169016-29575.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1723420800&semt=ais_hybrid"
-        width="350"
-      />
-      <hr />
-      <p>
-        Music is like a <strong>universal language</strong> that has the ability
-        to kindle a wide range of feelings. It's amazing how the many genres
-        cater to people with varied tastes. It can also serve as a form of
-        expression and communication when words fail. Different people use music
-        for different purposes, some as a stress relief, to influence mood.
-        Additionally, the social aspect of music—whether it’s attending
-        concerts, singing in choirs, or sharing playlists with friends—fosters a
-        sense of community and belonging. Ultimately, music is cherished not
-        only for its <em>aesthetic qualities</em> but also for its ability to
-        touch hearts and minds, making it a beloved art form across cultures and
-        generations.
-      </p>
-      <a href="https://en.wikipedia.org/wiki/List_of_music_genres_and_styles"
-        >View genres on Wikipedia</a
-      >
-      <br />
-      <br />
-      <button>Identify Music Taste</button>
-
-      <p>Coded by <em> Felistus Kioko </em></p>
-
-      <script>
-        function determineTaste() {
-          let name = prompt("what is your name?");
-          let choice = prompt("RnB, hiphop or trap?");
-
-          if ((choice = "RnB")) {
-            alert("Yaay " + name + "! You're so cool");
-          } else {
-            alert(
-              "Ah" +
-                name +
-                ", sounds boring to me but as long as you're happy😞"
-            );
-          }
-        }
-
-        let musicbtn = document.querySelector("button");
-
-        musicbtn.addEventListener("click", determineTaste);
-      </script>
+    <div class="heading">
+      <div class="emoji">🌥</div>
+      <h1>Currently 17°C in Nairobi</h1>
     </div>
+
+    <h2>13° /<strong> 23°</strong></h2>
+
+    <div class="content">
+      <ul>
+        <li>
+          <h4>🌧 Tomorrow</h4>
+          <p>10° / <strong>22°</strong></p>
+        </li>
+        <li>
+          <h4>🌥 Saturday</h4>
+          <p>15° / <strong>17°</strong></p>
+        </li>
+        <li>
+          <h4>☀ Sunday</h4>
+          <p>25° / <strong>28°</strong></p>
+        </li>
+      </ul>
+
+      <button>Change city</button>
+
+      <p>Coded by Felly Kioko😊</p>
+    </div>
+
+    <script>
+      function changeCity() {
+        let city = prompt("what city do you reside in?");
+        let temp = prompt("What is the current temperature?");
+
+        if (temp > 0) {
+          let emoji = document.querySelector(".emoji");
+          let h1 = document.querySelector("h1");
+          h1.innerHTML = "Currently " + temp + "°C in " + city;
+          emoji.innerHTML = "😃";
+        } else {
+          let emoji = document.querySelector(".emoji");
+          let h1 = document.querySelector("h1");
+          h1.innerHTML = "Currently " + temp + "°C in " + city;
+          emoji.innerHTML = "🥶";
+        }
+      }
+
+      let changeCityBtn = document.querySelector("button");
+
+      changeCityBtn.addEventListener("click", changeCity);
+    </script>
   </body>
 </html>
