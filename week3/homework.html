@@ -10,7 +10,7 @@
         display: block;
       }
       .music {
-        background: linear-gradient(to bottom, rgb(0, 255, 213), blue);
+        background: linear-gradient(to bottom, #00ffd5, #7575ee);
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         border-radius: 8px;
         margin: 20px 150px;
@@ -32,15 +32,16 @@
         display: block;
         margin: 5px auto;
         padding: 20px;
-        color: #ffffff;
-        background: black;
+        color: #000000;
+        background: #7d2ca9;
+        font-size: medium;
         border-radius: 20px;
         box-shadow: 5px 5px 6px #a5afda;
         transition: all 250ms ease-in-out;
       }
       button:hover {
-        color: #000000;
-        background: #efefef;
+        color: #59dcde;
+        background: #000000;
         cursor: pointer;
       }
     </style>
@@ -79,16 +80,16 @@
 
       <script>
         function determineTaste() {
-          let name = prompt("what is your name?");
-          let choice = prompt("RnB, hiphop or trap?");
+          let name = prompt("what is your name?").toLowerCase();
+          let choice = prompt("RnB, hiphop or trap?").toLowerCase();
 
-          if ((choice = "RnB")) {
-            alert("Yaay " + name + "! You're so cool");
+          if (choice === "rnb") {
+            alert("Yaay " + name + "! You're so cool ☺");
           } else {
             alert(
-              "Ah" +
+              "Oh " +
                 name +
-                ", sounds boring to me but as long as you're happy😞"
+                " 😞, sounds boring to me but as long as you're happy"
             );
           }
         }
