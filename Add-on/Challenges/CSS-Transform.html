@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>City collage effect</title>
+
+    <style>
+      div {
+        padding: 30px;
+        max-width: 150px;
+        display: block;
+        margin: 100px auto;
+      }
+      .nature-img {
+        width: 150px;
+        transform: rotate(110deg);
+        transition: all 250ms ease-in-out;
+      }
+      .nature-img:hover {
+        transform: scale(3);
+      }
+      .streets-img {
+        width: 150px;
+        transform: rotate(5deg);
+        transition: all 230ms ease-in-out;
+      }
+      .streets-img:hover {
+        transform: rotate(320deg) scale(1.4);
+      }
+      .beach-img {
+        width: 150px;
+        transform: scale(1.2) rotate(205deg);
+      }
+      .beach-img:hover {
+        transform: rotate(155deg) scale(1.2);
+        border-color: black;
+        border-width: 20px;
+      }
+      .food-img {
+        width: 150px;
+        transform: rotate(138deg);
+        transition: all 200ms ease-in-out;
+      }
+      .food-img:hover {
+        border-radius: 5px;
+        transform: scale(3);
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Melbourne_skyline_sor.jpg/1200px-Melbourne_skyline_sor.jpg"
+        alt="nature"
+        class="nature-img"
+      />
+      <img
+        src="https://media-cdn.tripadvisor.com/media/photo-m/1280/1c/ba/8d/5f/caption.jpg"
+        alt="beach"
+        class="beach-img"
+      />
+      <img
+        src="https://pbs.twimg.com/media/FETZDk1WQAATc9Z.jpg:large"
+        alt="streets"
+        class="streets-img"
+      />
+      <img
+        src="https://cdn.concreteplayground.com/content/uploads/2021/11/MFWF-New-Year-Street-Feasts-supplied.jpg"
+        alt="Street food"
+        class="food-img"
+      />
+    </div>
+  </body>
+</html>
