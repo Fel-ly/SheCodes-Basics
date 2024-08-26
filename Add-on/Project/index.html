@@ -157,7 +157,7 @@
         🔎Browse books online
       </a>
 
-      <button>View Popular Thrillers</button>
+      <button class="popularButton">Recommendations</button>
     </div>
 
     <footer>
@@ -166,6 +166,7 @@
     </footer>
 
     <script>
+      //to change theme
       function changeTheme() {
         let body = document.querySelector("body");
 
@@ -178,6 +179,20 @@
 
       let themeButton = document.querySelector(".theme-btn");
       themeButton.addEventListener("click", changeTheme);
+
+      //to view popular books
+      function directToSite() {
+        let name = prompt("What is your name?");
+
+        alert(
+          "Hey " +
+            name +
+            "! Good to meet a fellow thriller enthusiast🤗.Here are the top 3 thrillers in my list currently: Verity, The Inmate and the Silent Patient. You should give them a try😉"
+        );
+      }
+
+      let popularButton = document.querySelector(".popularButton");
+      popularButton.addEventListener("click", directToSite);
     </script>
   </body>
 </html>
