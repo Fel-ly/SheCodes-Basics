@@ -9,7 +9,7 @@
       body {
         background-color: antiquewhite;
       }
-      h2{
+      h2 {
         text-align: center;
       }
       img {
@@ -45,6 +45,14 @@
         border-radius: 10px;
         margin: 0 auto;
       }
+      .intro-pic {
+        border-radius: 10px;
+        transition: all 200ms ease-in-out;
+      }
+      .intro-pic:hover {
+        filter: contrast(50%);
+        transform: scale(1.2);
+      }
       footer {
         text-align: center;
         font-size: 17px;
@@ -65,6 +73,7 @@
         <img
           src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/141/012/original/download.jpg?1724632150"
           alt=""
+          class="intro-pic"
         />
       </a>
       <img
