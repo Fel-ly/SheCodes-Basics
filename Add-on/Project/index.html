@@ -82,10 +82,27 @@
         line-height: 1.5;
         font-family: Arial, Helvetica, sans-serif;
       }
+      .dark {
+        background: radial-gradient(
+          circle at 10% 20%,
+          rgb(90, 92, 106) 0%,
+          rgb(32, 45, 58) 81.3%
+        );
+        color: white;
+      }
+      .dark .container {
+        background-color: rgba(255, 255, 255, 0.3);
+      }
+      .dark a {
+        color: #ebc28d;
+      }
+      .dark .theme-btn {
+        border: none;
+      }
     </style>
   </head>
   <body>
-    <button class="theme-btn">Dark Theme</button>
+    <button class="theme-btn">Change Theme</button>
 
     <div class="container">
       <h1>Novels📚</h1>
@@ -143,6 +160,24 @@
       <button>View Popular Thrillers</button>
     </div>
 
-    <footer>Coded with Thrill 😄 by <i>Felistus Kioko</i></footer>
+    <footer>
+      Coded with Thrill 😄 by
+      <i><span style="color: #0068e7">Felistus Kioko</span></i>
+    </footer>
+
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
+      }
+
+      let themeButton = document.querySelector(".theme-btn");
+      themeButton.addEventListener("click", changeTheme);
+    </script>
   </body>
 </html>
